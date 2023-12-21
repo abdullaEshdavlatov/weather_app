@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bacground"
+    tools:context=".fragments.MainFragment">
+
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/day_and_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/city_name"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+    <ImageView
+        android:id="@+id/ic_search"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_search"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/text_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/day_and_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="80sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/text_temperature"
+        android:text="°"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:textSize="80sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/text_temperature"/>
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_temperature"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="22sp" />
+    <TextView
+        android:id="@+id/text_temp_feels_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/sf_pro_text_light"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    <ImageView
+        android:id="@+id/image_temperature"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_temp_feels_like"
+        android:layout_marginTop="16dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/image_temperature"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:background="@drawable/banner_background"
+        tools:listitem="@layout/hourly_weather_items"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+
+
+
+</RelativeLayout>
